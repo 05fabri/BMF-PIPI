@@ -1,0 +1,204 @@
+/* Esto borra los espacios en blanco que los navegadores ponen automáticamente a los márgenes y rellenos */
+* {
+    padding: 0;
+    margin: 0;
+}
+
+/* Le da a todo el fondo de la página un color gris claro con una fuente externa*/
+body {
+    background-color: gainsboro;
+    font-family: fuenteroboto;
+}
+
+/* Esta es la caja que contiene todo el contenido. Tiene espacio hacia los lados y adentro, un borde gris y una imagen de fondo */
+#marco {
+    margin: 20px 300px; /* espacio hacia afuera (arriba/abajo y lados) */
+    padding: 30px; /* espacio hacia adentro */
+    border: 2px solid gray;
+    overflow: hidden; /* evita que algo sobresalga de la caja */
+    background-image: url(Imagenes/fondo.jpg);
+}
+
+/* La parte de arriba (cabecera): alinea el logo y el título horizontalmente */
+#cabecera {
+    display: flex; /* acomoda los elementos en fila */
+    margin: 20px 10px;
+    justify-content: space-between; /* los separa a izquierda y derecha */
+    align-items: center; /* los alinea al centro verticalmente */
+}
+
+/* Hace que el logo sea redondo y tenga un tamaño fijo */
+#logo img {
+    border-radius: 50%; /* lo vuelve redondo */
+    height: 130px;
+}
+
+/* Este es el título principal grande. Tiene color cyan y fondo blanco */
+#titulo {
+    color: cyan;
+    background-color: #fff;
+    margin: 20px 0px;
+}
+
+/* Dibuja una línea negra horizontal */
+hr {
+    width: 93%; /* qué tan larga es la línea */
+    height: 1px; /* grosor */
+    background-color: #000;
+    margin: 0 auto; /* la centra */
+}
+
+/* Alinea el subtítulo a la derecha */
+#subtitulo {
+    display: flex;
+    margin: 10px 0;
+    justify-content: flex-end;
+}
+
+/* El texto que dice "Desarrollado por Fabricio2" tiene fondo blanco */
+#subtitulo p,
+#subtitulo h3 {
+    background-color: #fff;
+}
+
+/* Esta es la parte que explica qué es HTML, CSS y JavaScript */
+#parrafo1 {
+    color: #666; /* color gris para el texto */
+    text-align: justify; /* justifica el texto para que se vea ordenado */
+    line-height: 1.5; /* espacio entre líneas */
+    margin: 10px;
+}
+
+/* Ajusta el tamaño y el espacio de los subtítulos */
+#parrafo1 h3,
+#parrafo2 h3 {
+    font-size: 20px;
+    padding: 10px 0px;
+}
+
+/* Todos los títulos h3 tienen este estilo base */
+h3 {
+    color: #666;
+    padding-top: 15px;
+}
+
+/* Esta caja agrupa las 3 secciones: HTML, CSS y JavaScript */
+#caja1 {
+    text-align: justify;
+    display: flex;
+    flex-wrap: column; /* ⚠️ Debería ser "wrap" si quieres que se acomoden en filas */
+    justify-content: space-between;
+    padding: 20px;
+    border: 3px solid gray;
+}
+
+/* Estilo de las imágenes dentro de cada bloque (html, css, js) */
+#caja1 img {
+    margin: 10px 40px;
+    width: 80px; /* tamaño fijo para que no se desborden */
+}
+
+/* Las 3 cajas (html, css y js) tienen bordes, márgenes y espacio interno */
+#html1, #css1, #java1 {
+    margin: 10px;
+    padding: 10px;
+    box-sizing: border-box; /* el padding no aumenta el tamaño total */
+    overflow: hidden;
+    border: 2px solid gray;
+}
+
+/* Título de cada caja, centrado, en blanco y con espacio */
+#caja1 h4 {
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+/* Estilo específico para la caja HTML */
+#html1 {
+    background-color: rgb(240, 231, 216); /* fondo naranja claro */
+}
+#html1 h4 {
+    background-color: orange; /* fondo del título naranja fuerte */
+}
+
+/* Estilo para la caja CSS */
+#css1 {
+    background-color: rgb(224, 225, 240); /* fondo azul claro */
+}
+#css1 h4 {
+    background-color: blue; /* título azul fuerte */
+}
+
+/* Estilo para la caja JavaScript */
+#java1 {
+    background-color: rgb(213, 241, 213); /* fondo verde claro */
+}
+#java1 h4 {
+    background-color: green; /* título verde fuerte */
+}
+
+/* Esta es la segunda caja, que tiene también 3 bloques (HTML, CSS, JS), pero más pequeños */
+#caja2 {
+    border: 2px solid gray;
+    display: flex;
+    margin: 20px 0px;
+    justify-content: space-between; /* los separa horizontalmente */
+}
+
+/* Imágenes pequeñas dentro de caja2 */
+#caja2 img {
+    width: 15px;
+}
+
+/* Cada mini-caja (html2, css2, java2) con su estilo, espacio y justificación */
+#html2, #css2, #java2 {
+    width: 50%;
+    padding: 10px;
+    border: 2px solid darkgray;
+    margin: 10px;
+    text-align: justify;
+}
+
+/* Colores de fondo de cada mini-caja */
+#html2 {
+    background-color: rgb(241, 235, 222); /* naranja claro */
+}
+#css2 {
+    background-color: rgb(224, 225, 240); /* azul claro */
+}
+#java2 {
+    background-color: rgb(213, 241, 213); /* verde claro */
+}
+
+/* Títulos de las mini-cajas */
+#titulohtml2, #titulocss2, #titulojava2 {
+    padding: 10px;
+    color: white;
+    text-align: center;
+}
+#titulohtml2 {
+    background-color: orange;
+}
+#titulocss2 {
+    background-color: blue;
+}
+#titulojava2 {
+    background-color: green;
+}
+
+/* Imagen centrada con sombra para destacar */
+#casaimg img {
+    width: 60%;
+    margin: 10px 20%; /* centra la imagen horizontalmente */
+    box-shadow: 3px 3px 8px black; /* sombra negra */
+}
+
+/* Parte final tipo resumen: centrado, borde redondeado y fondo blanco */
+#resumen {
+    text-align: center;
+    margin: 20px;
+    border: 2px solid gray;
+    border-radius: 10px; /* bordes redondeados */
+    background-color: white;
+}
